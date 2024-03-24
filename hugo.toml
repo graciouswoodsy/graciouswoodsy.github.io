@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Grace Woods'
+theme = "hugo-theme-monochrome"
+
+[params]
+enable_toc = false # default: true
