@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-26T15:07:26-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grace Woods</title><subtitle>A human that likes building things and helping people</subtitle><entry><title type="html">My First Blog Post</title><link href="http://localhost:4000/blog/2025/02/07/Introduction/" rel="alternate" type="text/html" title="My First Blog Post" /><published>2025-02-07T00:00:00-08:00</published><updated>2025-02-07T00:00:00-08:00</updated><id>http://localhost:4000/blog/2025/02/07/Introduction</id><content type="html" xml:base="http://localhost:4000/blog/2025/02/07/Introduction/"><![CDATA[<p>This is my first blog post. You can write in Markdown format here.</p>
+
+<p>Here’s what that means:</p>
+<ul>
+  <li>You can make lists</li>
+  <li><strong>Bold text</strong> is easy</li>
+  <li><em>Italics</em> work too</li>
+  <li><a href="https://example.com">Links</a> are simple</li>
+</ul>
+
+<h2 id="subheadings-work">Subheadings work</h2>
+
+<p>And you can write normal paragraphs just like this.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[This is my first blog post. You can write in Markdown format here.]]></summary></entry><entry><title type="html">Building My Personal Website</title><link href="http://localhost:4000/blog/2025/02/01/second/" rel="alternate" type="text/html" title="Building My Personal Website" /><published>2025-02-01T00:00:00-08:00</published><updated>2025-02-01T00:00:00-08:00</updated><id>http://localhost:4000/blog/2025/02/01/second</id><content type="html" xml:base="http://localhost:4000/blog/2025/02/01/second/"><![CDATA[<h2 id="the-journey-of-building-this-site">The Journey of Building This Site</h2>
+
+<p>I decided to build my personal website using Jekyll and GitHub Pages. Here’s what I learned along the way:</p>
+
+<h3 id="why-jekyll">Why Jekyll?</h3>
+<ul>
+  <li>Simple to use</li>
+  <li>Great for blogging</li>
+  <li>Free hosting with GitHub Pages</li>
+  <li>Markdown support</li>
+</ul>
+
+<h3 id="the-process">The Process</h3>
+<p>Setting up the site was surprisingly straightforward. The hardest part was understanding how Jekyll’s directory structure works, but once I got that down, everything else fell into place.</p>
+
+<h3 id="next-steps">Next Steps</h3>
+<p>I’m planning to add more features like:</p>
+<ul>
+  <li>A portfolio section</li>
+  <li>Better blog categorization</li>
+  <li>Maybe some interactive elements</li>
+</ul>
+
+<p>Stay tuned for more updates!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Journey of Building This Site]]></summary></entry></feed>
