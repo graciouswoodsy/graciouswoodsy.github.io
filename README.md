@@ -1,2 +1,2 @@
 # graceannwoods
-Building my personal website
+sup, i'm building my personal website
