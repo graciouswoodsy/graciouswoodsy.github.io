@@ -1,0 +1,244 @@
+# Edit this file to update the website. Do not edit recovery/index.html for copy changes.
+# Every healing/hate pair reserves the same space, so changing modes does not move the layout.
+
+settings:
+  formspree_id: "YOUR_FORM_ID"
+  asset_version: "1"
+
+site:
+  name:
+    healing: "Grace's Recovery Corner"
+    hate: "Grace's Complaint Department"
+  note:
+    healing: "personal recovery page · last revised July 19, 2026"
+    hate: "unauthorized repository for orthopedic contempt"
+  browser_title:
+    healing: "Grace's Recovery Corner"
+    hate: "Grace's Complaint Department"
+
+header:
+  status:
+    healing: "Grace · Day 3 · Healing"
+    hate: "Grace · Day 3 · Hostile"
+  headline:
+    healing: "Resting up, healing on schedule"
+    hate: "Horizontal. Furious. Betrayed by My Own Leg."
+  updated:
+    healing: "Updated July 19 · a little sore but okay"
+    hate: "Updated July 19 · healing under protest"
+
+navigation:
+  - id: home
+    label: Home
+  - id: updates
+    label: Updates
+  - id: story
+    label: The Story
+  - id: journal
+    label: Journal
+  - id: help
+    label: How to Help
+  - id: note
+    label: Leave a Note
+
+home:
+  contact:
+    eyebrow:
+      healing: "Messages"
+      hate: "Complaints department"
+    title:
+      healing: "Say hi"
+      hate: "Say something useful"
+    text:
+      healing: >-
+        Thinking of me? Drop a quick note. No reply expected; it comes straight
+        to me. It's the easiest way to reach me right now.
+      hate: >-
+        If you are here to ask how recovery is going, read the page again.
+        Short, useful messages may be tolerated.
+    link:
+      healing: "leave me a note →"
+      hate: "submit remarks →"
+  log:
+    eyebrow:
+      healing: "Recovery log"
+      hate: "Evidence locker"
+    title:
+      healing: "Now and next"
+      hate: "Terms of surrender"
+    upcoming_title:
+      healing: "Coming up"
+      hate: "Scheduled indignities"
+    upcoming:
+      - date: "Jul 22"
+        text:
+          healing: "First PT session"
+          hate: "First PT session. A stranger bends the evidence."
+      - date: "Early Aug"
+        text:
+          healing: "Hopefully off crutches"
+          hate: "These cursed sticks leave my sight."
+      - date: "Sep"
+        text:
+          healing: "Walking normally again"
+          hate: "The leg resumes its basic contractual duties."
+    latest_title:
+      healing: "Latest"
+      hate: "Fresh charges"
+    latest:
+      - date: "July 19"
+        text:
+          healing: >-
+            Home and set up on the couch with approximately nine pillows. Pain
+            is manageable, mostly just tired.
+          hate: >-
+            Nine pillows. One screaming machine. No dignity. The ceiling and I
+            despise each other.
+      - date: "July 17"
+        text:
+          healing: "Surgery went well — no complications. Groggy but grateful."
+          hate: >-
+            The knee was opened, corrected, and placed on probation. It remains
+            ungrateful.
+    all_updates_link:
+      healing: "see all updates →"
+      hate: "review all offenses →"
+
+updates:
+  title:
+    healing: "Recovery updates"
+    hate: "Complaint log"
+  introduction:
+    healing: >-
+      Newest first. I add to this so you don't have to ask; check here anytime.
+    hate: "Read this before making me explain my own injury to you."
+  entries:
+    - date: "July 19"
+      text:
+        healing: >-
+          Home and set up on the couch with approximately nine pillows. Pain is
+          manageable, mostly just tired. The dog thinks the ice machine is a threat.
+        hate: >-
+          Home. Immobilized. Ice machine screaming. Every object in this room
+          has become an enemy.
+    - date: "July 17"
+      text:
+        healing: >-
+          Surgery went well — no complications. Doctor was happy with how
+          everything looked. Groggy but grateful.
+        hate: >-
+          Repair completed without complications. Still an appalling way to
+          spend a Friday.
+    - date: "July 10"
+      text:
+        healing: >-
+          Pre-op appointment done, surgery scheduled. Nervous but ready to be
+          on the other side of this.
+        hate: >-
+          Signed documents confirming that every institution involved may
+          remain blameless. Excellent.
+
+story:
+  title:
+    healing: "The story, once"
+    hate: "The indictment"
+  introduction:
+    healing: >-
+      So I never have to re-explain. Facts on the left, feelings on the right.
+    hate: "Facts on the left. Contempt on the right. No acquittals."
+  facts_title:
+    healing: "What happened"
+    hate: "Cause of failure"
+  facts:
+    - label: "The injury"
+      text:
+        healing: "EDIT — e.g. torn ACL + meniscus playing soccer in June."
+        hate: "EDIT — ACL + meniscus, June. The joint abandoned its post."
+    - label: "The surgery"
+      text:
+        healing: "EDIT — e.g. arthroscopic ACL reconstruction on July 17."
+        hate: "EDIT — camera, drill, reconstruction. Mechanical correction of a biological failure."
+    - label: "Recovery plan"
+      text:
+        healing: "EDIT — crutches ~2 weeks, PT for a few months, back to normal-ish by fall."
+        hate: "EDIT — crutches, PT, months of compulsory reconciliation with the traitor limb."
+  feelings_title:
+    healing: "How I'm feeling about it"
+    hate: "Statement for the prosecution"
+  feelings:
+    healing: >-
+      EDIT — a few sentences in your own voice. What's been hard, what you're
+      looking forward to, what you're grateful for.
+    hate: >-
+      EDIT — enter the grievance without perspective, reassurance, gratitude,
+      or a lesson.
+
+journal:
+  title:
+    healing: "Journal"
+    hate: "Hostile record"
+  introduction:
+    healing: "Longer thoughts, when I feel like writing them. No pressure to read."
+    hate: "Statements entered without mitigation."
+  entries:
+    - date:
+        healing: "July 18 — On asking for help"
+        hate: "July 18 — The humiliation of needing help"
+      text:
+        healing: >-
+          EDIT — write as much or as little as you want. This is your space. Add
+          new entries above this one.
+        hate: "EDIT — say the unforgivable version. Do not conclude anything."
+
+help:
+  title:
+    healing: "If you're wondering how to help"
+    hate: "Ways to be less useless"
+  introduction:
+    healing: "Checking this page instead of texting already helps a lot. But if you're asking:"
+    hate: "If it creates more work for me, it is not help."
+  columns:
+    - items:
+        - label: "Meals"
+          text:
+            healing: "EDIT: link a meal train, or ‘surprise me, I like X.’"
+            hate: "EDIT: bring edible food. Do not create a coordination problem."
+        - label: "Rides"
+          text:
+            healing: "EDIT: PT on X days, could use a lift."
+            hate: "EDIT: arrive on time. Drive normally. Do not narrate traffic."
+    - items:
+        - label: "Company"
+          text:
+            healing: "EDIT: a visit, a funny meme, a voice memo. Low-key is perfect."
+            hate: "EDIT: be interesting or be brief."
+        - label: "Space"
+          text:
+            healing: "EDIT: some days I just need rest, and that's okay."
+            hate: "EDIT: absence remains an excellent contribution."
+
+note:
+  title:
+    healing: "Leave me a note"
+    hate: "Address your remarks"
+  introduction:
+    healing: "Say hi, send encouragement, or just let me know you stopped by."
+    hate: "Compliments, useful information, and silence are all acceptable."
+  submit:
+    healing: "Send my note"
+    hate: "Transmit"
+  success:
+    healing: "Got it — thank you for checking in."
+    hate: "Filed."
+  aside_title:
+    healing: "A little note back"
+    hate: "Conditions of entry"
+  aside:
+    - healing: "I read every message, even if I can't reply right away. No message is too small."
+      hate: "Messages are screened for value. A reply is neither promised nor implied."
+    - healing: "Your note comes straight to me privately; no one else visiting the site can see it."
+      hate: "Your note is private. Keep it that way."
+
+footer:
+  healing: "Made with a little rest and a lot of care · Please check here before texting."
+  hate: "Recovery continues. Questions already answered above will be judged."
