@@ -24,3 +24,6 @@ exclude:
   - Gemfile.lock
   - CNAME
   - README.md
+  - RECOVERY_EDITING.md
+  - CLAUDE.md
+  - scripts

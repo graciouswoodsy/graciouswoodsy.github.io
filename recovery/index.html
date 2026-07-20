@@ -1,0 +1,386 @@
+---
+layout: null
+permalink: /recovery/
+---
+{% assign c = site.data.recovery %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grace's recovery updates, schedule, and notes.">
+  <title>{{ c.site.browser_title.healing }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/recovery.css' | relative_url }}?v={{ c.settings.asset_version }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="banner">
+    <div class="blood-edge" id="drips" aria-hidden="true"></div>
+    <div class="site-name-row">
+      <span class="site-name">{% include recovery/mood.html pair=c.site.name %}</span>
+      <span class="site-note">{% include recovery/mood.html pair=c.site.note %}</span>
+    </div>
+
+    <div class="banner-inner">
+      <div class="banner-right">
+        <div class="headline">
+          <p class="sw-top">{% include recovery/mood.html pair=c.header.status %}</p>
+          <h1 class="sw-big">{% include recovery/mood.html pair=c.header.headline %}</h1>
+          <p class="sw-meta">{% include recovery/mood.html pair=c.header.updated %}</p>
+        </div>
+
+        <nav class="tabs" role="tablist" aria-label="Recovery site sections">
+          {% for item in c.navigation %}
+          <span class="nav-item">[<button class="tab{% if forloop.first %} active{% endif %}" id="tab-{{ item.id }}" type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="{{ item.id }}" data-tab="{{ item.id }}">{{ item.label }}</button>]</span>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HOME -->
+    <section class="panel active" id="home" role="tabpanel" aria-labelledby="tab-home">
+      <div class="home-layout">
+        <section class="home-contact" aria-labelledby="home-contact-title">
+          <p class="eyebrow">{% include recovery/mood.html pair=c.home.contact.eyebrow %}</p>
+          <h2 id="home-contact-title">{% include recovery/mood.html pair=c.home.contact.title %}</h2>
+          <p class="note-copy">{% include recovery/mood.html pair=c.home.contact.text %}</p>
+          <a href="#note" class="cta" data-goto="note">{% include recovery/mood.html pair=c.home.contact.link %}</a>
+        </section>
+
+        <section class="home-log" aria-labelledby="home-log-title">
+          <p class="eyebrow">{% include recovery/mood.html pair=c.home.log.eyebrow %}</p>
+          <h2 id="home-log-title">{% include recovery/mood.html pair=c.home.log.title %}</h2>
+
+          <div class="log-group">
+            <h3>{% include recovery/mood.html pair=c.home.log.upcoming_title %}</h3>
+            <div class="next-list">
+              {% for item in c.home.log.upcoming %}
+              <div class="next-item">
+                <span class="when">{{ item.date }}</span>
+                <span class="what">{% include recovery/mood.html pair=item.text %}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="log-group">
+            <h3>{% include recovery/mood.html pair=c.home.log.latest_title %}</h3>
+            {% for item in c.home.log.latest %}
+            <div class="entry">
+              <span class="node"></span><span class="date">{{ item.date }}</span>
+              <p>{% include recovery/mood.html pair=item.text %}</p>
+            </div>
+            {% endfor %}
+            <p class="text-link"><a href="#updates" data-goto="updates">{% include recovery/mood.html pair=c.home.log.all_updates_link %}</a></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- UPDATES -->
+    <section class="panel" id="updates" role="tabpanel" aria-labelledby="tab-updates" hidden>
+      <h2>{% include recovery/mood.html pair=c.updates.title %}</h2>
+      <p class="sub">{% include recovery/mood.html pair=c.updates.introduction %}</p>
+      <div class="content-block">
+        {% for item in c.updates.entries %}
+        <div class="entry">
+          <span class="node"></span><span class="date">{{ item.date }}</span>
+          <p>{% include recovery/mood.html pair=item.text %}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- THE STORY -->
+    <section class="panel" id="story" role="tabpanel" aria-labelledby="tab-story" hidden>
+      <h2>{% include recovery/mood.html pair=c.story.title %}</h2>
+      <p class="sub">{% include recovery/mood.html pair=c.story.introduction %}</p>
+      <div class="cols">
+        <div class="content-block facts">
+          <h3>{% include recovery/mood.html pair=c.story.facts_title %}</h3>
+          <dl>
+            {% for item in c.story.facts %}
+            <dt>{{ item.label }}</dt>
+            <dd>{% include recovery/mood.html pair=item.text %}</dd>
+            {% endfor %}
+          </dl>
+        </div>
+        <div class="content-block">
+          <h3>{% include recovery/mood.html pair=c.story.feelings_title %}</h3>
+          <p class="story-copy">{% include recovery/mood.html pair=c.story.feelings %}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section class="panel" id="journal" role="tabpanel" aria-labelledby="tab-journal" hidden>
+      <h2>{% include recovery/mood.html pair=c.journal.title %}</h2>
+      <p class="sub">{% include recovery/mood.html pair=c.journal.introduction %}</p>
+      <div class="content-block">
+        {% for item in c.journal.entries %}
+        <div class="entry">
+          <span class="node"></span><span class="date">{% include recovery/mood.html pair=item.date %}</span>
+          <p>{% include recovery/mood.html pair=item.text %}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- HOW TO HELP -->
+    <section class="panel" id="help" role="tabpanel" aria-labelledby="tab-help" hidden>
+      <h2>{% include recovery/mood.html pair=c.help.title %}</h2>
+      <p class="sub">{% include recovery/mood.html pair=c.help.introduction %}</p>
+      <div class="cols">
+        {% for column in c.help.columns %}
+        <div class="content-block">
+          <ul class="help-list">
+            {% for item in column.items %}
+            <li><strong>{{ item.label }}</strong><br><span class="txt">{% include recovery/mood.html pair=item.text %}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- LEAVE A NOTE -->
+    <section class="panel" id="note" role="tabpanel" aria-labelledby="tab-note" hidden>
+      <h2>{% include recovery/mood.html pair=c.note.title %}</h2>
+      <p class="sub">{% include recovery/mood.html pair=c.note.introduction %}</p>
+      <div class="cols col-narrow">
+        <div class="content-block">
+          <form id="noteForm" action="https://formspree.io/f/{{ c.settings.formspree_id }}" method="POST">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your email <span class="optional">(optional)</span></label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Your note</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">{% include recovery/mood.html pair=c.note.submit %}</button>
+          </form>
+          <div class="thanks" id="thanks" role="status" aria-live="polite">
+            <p>{% include recovery/mood.html pair=c.note.success %}</p>
+          </div>
+        </div>
+        <div class="content-block">
+          <h3>{% include recovery/mood.html pair=c.note.aside_title %}</h3>
+          <div class="aside-note">
+            {% for paragraph in c.note.aside %}
+            <p>{% include recovery/mood.html pair=paragraph %}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="walking-cat" id="walkingCat" aria-hidden="true">
+    <svg viewBox="0 0 112 72">
+      <path class="cat-tail-outline" d="M24 39C6 39 7 19 16 13"/>
+      <path class="cat-tail" d="M24 39C6 39 7 19 16 13"/>
+
+      <ellipse class="cat-outline" cx="52" cy="39" rx="34" ry="18"/>
+
+      <g class="cat-leg-a">
+        <path class="cat-outline" d="M33 50H44L42 67H31Z"/>
+        <path class="cat-outline" d="M62 50H73L76 67H65Z"/>
+      </g>
+      <g class="cat-leg-b">
+        <path class="cat-outline" d="M45 51H55L57 68H47Z"/>
+        <path class="cat-outline" d="M72 49H82L84 66H74Z"/>
+      </g>
+
+      <path class="cat-outline" d="M75 18L82 6L88 19M94 19L103 8L105 26"/>
+      <ellipse class="cat-outline" cx="88" cy="31" rx="21" ry="19"/>
+
+      <ellipse class="cat-eye" cx="82" cy="28" rx="5" ry="6"/>
+      <ellipse class="cat-eye" cx="96" cy="30" rx="5" ry="6"/>
+      <circle class="cat-pupil" cx="84" cy="30" r="2"/>
+      <circle class="cat-pupil" cx="94" cy="31" r="2"/>
+      <path class="cat-mouth" d="M86 38Q89 41 92 37"/>
+      <path class="cat-tongue" d="M88 39Q91 48 94 39Z"/>
+      <path class="cat-whisker" d="M79 37L67 34M79 40L65 42M98 38L110 35M98 41L111 44"/>
+    </svg>
+  </div>
+
+  <footer>
+    <span class="footer-copy">{% include recovery/mood.html pair=c.footer %}</span>
+    <button class="leg-btn footer-mood" id="moodToggle" type="button" title="Switch to dark mode" aria-label="Switch to dark mode" aria-pressed="false">🦵</button>
+  </footer>
+
+  <script>
+    const moodBtn = document.getElementById('moodToggle');
+    const drips = document.getElementById('drips');
+
+    for (let index = 0; index < 26; index += 1) {
+      const drip = document.createElement('span');
+      drip.style.left = (Math.random() * 100) + '%';
+      drip.style.animationDelay = (Math.random() * 3.2) + 's';
+      drip.style.animationDuration = (2.4 + Math.random() * 2.6) + 's';
+      drip.style.width = (2 + Math.random() * 3).toFixed(1) + 'px';
+      drips.appendChild(drip);
+    }
+
+    function setMood(rage) {
+      document.documentElement.classList.toggle('rage', rage);
+      document.body.classList.toggle('rage', rage);
+      moodBtn.textContent = rage ? '🦿' : '🦵';
+      moodBtn.setAttribute('aria-pressed', String(rage));
+      moodBtn.setAttribute('aria-label', rage ? 'Switch to daylight mode' : 'Switch to dark mode');
+      moodBtn.title = rage ? 'Switch to daylight mode' : 'Switch to dark mode';
+      document.title = rage ? {{ c.site.browser_title.hate | jsonify }} : {{ c.site.browser_title.healing | jsonify }};
+      try { localStorage.setItem('grace-recovery-mood', rage ? 'rage' : 'healing'); } catch (error) {}
+    }
+
+    try {
+      const requestedMood = new URLSearchParams(location.search).get('mood');
+      if (requestedMood === 'blood') setMood(true);
+      else if (requestedMood === 'healing') setMood(false);
+      else setMood(localStorage.getItem('grace-recovery-mood') === 'rage');
+    } catch (error) {
+      setMood(false);
+    }
+
+    moodBtn.addEventListener('click', () => {
+      setMood(!document.body.classList.contains('rage'));
+    });
+
+    const tabs = [...document.querySelectorAll('.tab')];
+    const panels = [...document.querySelectorAll('.panel')];
+
+    function show(id, updateHash = true) {
+      if (!document.getElementById(id)?.classList.contains('panel')) return;
+
+      tabs.forEach((tab) => {
+        const active = tab.dataset.tab === id;
+        tab.classList.toggle('active', active);
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+      });
+
+      panels.forEach((panel) => {
+        const active = panel.id === id;
+        panel.classList.toggle('active', active);
+        panel.hidden = !active;
+      });
+
+      if (updateHash) history.replaceState(null, '', '#' + id);
+      window.scrollTo({ top: 0 });
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => show(tab.dataset.tab));
+      tab.addEventListener('keydown', (event) => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        tabs[next].focus();
+        show(tabs[next].dataset.tab);
+      });
+    });
+
+    document.querySelectorAll('[data-goto]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        show(link.dataset.goto);
+      });
+    });
+
+    const initialTab = location.hash.slice(1);
+    show(document.getElementById(initialTab)?.classList.contains('panel') ? initialTab : 'home', false);
+
+    window.addEventListener('hashchange', () => {
+      const id = location.hash.slice(1);
+      if (document.getElementById(id)?.classList.contains('panel')) show(id, false);
+    });
+
+    const form = document.getElementById('noteForm');
+    const thanks = document.getElementById('thanks');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const button = form.querySelector('button');
+      const label = button.innerHTML;
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          thanks.style.display = 'block';
+        } else {
+          button.disabled = false;
+          button.innerHTML = label;
+        }
+      } catch (error) {
+        button.disabled = false;
+        button.innerHTML = label;
+      }
+    });
+
+    const walkingCat = document.getElementById('walkingCat');
+
+    function releaseCat() {
+      walkingCat.classList.remove('walking');
+      void walkingCat.offsetWidth;
+      walkingCat.classList.add('walking');
+    }
+
+    walkingCat.addEventListener('animationend', (event) => {
+      if (event.target === walkingCat && event.animationName === 'cat-cross') {
+        walkingCat.classList.remove('walking');
+      }
+    });
+
+    window.setTimeout(() => {
+      releaseCat();
+      window.setInterval(releaseCat, 200000);
+    }, 5000);
+
+    const starColors = ['#ab63bb', '#bb639f', '#bb6373', '#ffffff'];
+    const bloodColors = ['#70000d', '#8b0014', '#b00020', '#d61830'];
+
+    function emitHoverBurst(control) {
+      const bounds = control.getBoundingClientRect();
+      const rage = document.body.classList.contains('rage');
+      const count = rage ? 9 : 8;
+
+      for (let index = 0; index < count; index += 1) {
+        const particle = document.createElement('span');
+        particle.className = 'hover-particle ' + (rage ? 'blood-particle' : 'star-particle');
+        particle.textContent = rage ? '' : ['★', '✦', '✶'][index % 3];
+        particle.style.left = (bounds.left + bounds.width / 2) + 'px';
+        particle.style.top = (bounds.top + bounds.height / 2) + 'px';
+        particle.style.color = (rage ? bloodColors : starColors)[index % 4];
+        particle.style.background = rage ? bloodColors[index % 4] : 'transparent';
+        particle.style.setProperty('--dx', ((Math.random() - .5) * 120).toFixed(1) + 'px');
+        particle.style.setProperty('--dy', (rage ? (-15 + Math.random() * 90) : (-30 - Math.random() * 75)).toFixed(1) + 'px');
+        particle.style.setProperty('--turn', ((Math.random() - .5) * 260).toFixed(0) + 'deg');
+        document.body.appendChild(particle);
+        particle.addEventListener('animationend', () => particle.remove(), { once: true });
+      }
+    }
+
+    document.querySelectorAll('button, .cta').forEach((control) => {
+      control.addEventListener('mouseenter', () => emitHoverBurst(control));
+    });
+  </script>
+</body>
+</html>
